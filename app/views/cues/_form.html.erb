@@ -10,11 +10,8 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.text_area :body %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+      <%= f.text_area :body, placeholder: "Your Stuff Here", rows:2, id:"expand" %>  
+      <center>
+      <%= f.submit "Create Your Cue Card Now!", class: "button success"%>  
+      </center>
 <% end %>

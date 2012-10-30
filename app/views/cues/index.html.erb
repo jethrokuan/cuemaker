@@ -2,28 +2,58 @@
 <div class="nine columns centered">
 <h1 id="heading">CueMaker</h1>
 <p class="subheader">Don't want to waste time making cuecards for your PW? You're at the right place (:</p>
-<table>
-  <tr>
-    <th>Body</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @cues.each do |cue| %>
-  <tr>
-    <td><%= cue.body %></td>
-    <td><%= link_to 'Show', cue %></td>
-    <td><%= link_to 'Edit', edit_cue_path(cue) %></td>
-    <td><%= link_to 'Destroy', cue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
 
 <%= render 'form' %>
 
-<%= link_to 'New Cue', new_cue_path %>
+<dl class="tabs">
+  <dd class="active"><a href="#how">How To Use</a></dd>
+  <dd><a href="#about">About</a></dd>
+</dl>
+<ul class="tabs-content">
+  <li class="active" id="howTab">
+    <h6>What?</h6>
+    <p>This app was created for the creation of printable, ready-made cue cards from plain text.</p>
+    <h6>Requirements</h6>
+    <p>2</p>
+  </li>
+  <li id="aboutTab">
+    Name: Jethro Kuan <br>
+    <p>Email: <%=link_to "jethrokuan95@gmail.com", "mailto:jethrokuan95@gmail.com"%></p>
+    
+    <p>Site code is freely available <%=link_to "here","https://github.com/jethrokuan/cuemaker"%></p>
+    <p>My Website: <%=link_to "jethrokuan.1.ai", "http://jethrokuan.1.ai"%></p>
+    Other Projects: <br>
+    <ul>
+      <li><%=link_to "Openlectures", "http://olweb.herokuapp.com"%></li>
+      <li><%=link_to "Newsdaily", "http://newsdaily.herokuapp.com"%></li>
+    </ul>
+  </li>
+</ul>
+<hr>
+<div class="row">
+  <div class="six columns">
+    &copy Jethro Kuan 2012
+  </div>
+  <div class="six columns">
+    <div class="fb-like" data-href="http://cuemaker.herokuapp.com/" data-send="false" data-width="450" data-show-faces="true" data-font="arial"></div>    
+  </div>
 </div>
 </div>
+</div>
+  
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=510921032252599";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+$(document).ready(function() {
+  $('#expand')
+    .focus(function(){ this.rows=12 })
+    .blur( function(){ this.rows=2 });
+});
+</script>
+
