@@ -25,11 +25,11 @@
 
 // Font Settings
 
-// $headerFontFamily: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$headerFontFamily: "Open Sans", "Helvetica", Helvetica, Arial, sans-serif;
 // $headerFontWeight: bold;
 // $headerFontStyle: normal;
 // $headerFontColor: #222;
-// $bodyFontFamily: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$bodyFontFamily: "Open Sans", "Helvetica", Helvetica, Arial, sans-serif;
 // $bodyFontWeight: normal;
 // $bodyFontStyle: normal;
 // $bodyFontColor: $txtColor;
@@ -241,3 +241,7 @@
 // http://www.modularscale.com by Tim Brown
 // https://github.com/scottkellum/modular-scale by scottkellum
 @import 'foundation';
+
+.subheader {
+  text-align: center;
+}

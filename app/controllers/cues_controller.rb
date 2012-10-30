@@ -3,6 +3,7 @@ class CuesController < ApplicationController
   # GET /cues.json
   def index
     @cues = Cue.all
+    @cue = Cue.new
 
     respond_to do |format|
       format.html # index.html.erb
