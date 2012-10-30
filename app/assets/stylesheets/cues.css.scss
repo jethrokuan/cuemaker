@@ -11,3 +11,10 @@
 textarea{
 white-space:pre;
 }
+
+div#pasted {
+  height: 200px;
+  overflow: auto;
+  border-width: 2px;
+  border-style: solid;
+}

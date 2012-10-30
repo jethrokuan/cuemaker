@@ -1,10 +1,13 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Body:</b>
-  <%= @cue.body %>
-</p>
-
-
-<%= link_to 'Edit', edit_cue_path(@cue) %> |
-<%= link_to 'Back', cues_path %>
+<div class="row">
+  <div class="nine columns centered">
+  <center>
+    <h1 id="heading">Congratulations!</h1>
+    <p class="subheading">Your cue card is ready!</p>
+    <h5>Pasted Text</h5>
+    <div id="pasted">
+      <%=@cue.body%>
+    </div>
+    <p>Get it <%=link_to "here", cue_path(@cue, format: "pdf")%>!</p>
+    </center>
+  </div>
+</div>

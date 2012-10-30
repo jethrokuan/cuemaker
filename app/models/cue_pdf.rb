@@ -1,6 +1,6 @@
 class CuePdf < Prawn::Document
   def initialize(cue)
-    super(page_size: [220,140], :margin => [2,2,2,2])
+    super(page_size: [220,140], :margin => [2,2,2,2], font: "Helvetica")
     @cue = cue
     body
   end
