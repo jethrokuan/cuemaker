@@ -19,6 +19,12 @@ class CuesController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @cue }
+      format.pdf do
+      pdf = CuePdf.new(@cue)
+      send_data pdf.render, filename: "cuecard",
+                            type: "application/pdf",
+                            disposition: "inline"
+    end
     end
   end
 
